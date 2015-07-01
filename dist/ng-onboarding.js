@@ -54,6 +54,7 @@
           enabled: '=',
           steps: '=',
           onFinishCallback: '=',
+          onStepCallback: '=',
           index: '=stepIndex'
         },
         replace: true,
@@ -76,6 +77,9 @@
           };
           scope.$watch('index', function(newVal, oldVal) {
             var attr, k, v, _i, _len;
+            if (scope.onStepCallback) {
+              scope.onStepCallback();
+            }
             if (typeof newVal === 'undefined') {
               scope.enabled = false;
               setupOverlay(false);
