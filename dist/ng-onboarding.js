@@ -63,7 +63,10 @@
           curStep = null;
           attributesToClear = ['title', 'top', 'right', 'bottom', 'left', 'width', 'height', 'position'];
           scope.next = function() {
-            return scope.index = scope.index + 1;
+            scope.index = scope.index + 1;
+            if (scope.onStepCallback) {
+              return scope.onStepCallback();
+            }
           };
           scope.previous = function() {
             return scope.index = scope.index - 1;
@@ -77,9 +80,6 @@
           };
           scope.$watch('index', function(newVal, oldVal) {
             var attr, k, v, _i, _len;
-            if (scope.onStepCallback) {
-              scope.onStepCallback();
-            }
             if (typeof newVal === 'undefined') {
               scope.enabled = false;
               setupOverlay(false);

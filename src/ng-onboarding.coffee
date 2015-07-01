@@ -58,7 +58,10 @@ app.directive 'onboardingPopover', ['ngOnboardingDefaults', '$sce', '$timeout', 
     attributesToClear = ['title', 'top', 'right', 'bottom', 'left', 'width', 'height', 'position']
 
     # Button Actions
-    scope.next = -> scope.index = scope.index + 1
+    scope.next = -> 
+      scope.index = scope.index + 1
+      if scope.onStepCallback
+        scope.onStepCallback()
     scope.previous = -> scope.index = scope.index - 1
     scope.close = ->
       scope.enabled = false
@@ -68,9 +71,6 @@ app.directive 'onboardingPopover', ['ngOnboardingDefaults', '$sce', '$timeout', 
 
     # Watch for changes in the current step index
     scope.$watch 'index', (newVal, oldVal) ->
-      if scope.onStepCallback
-        scope.onStepCallback()
-
       if typeof(newVal) == 'undefined'
         scope.enabled = false
         setupOverlay(false)
