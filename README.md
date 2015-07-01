@@ -45,15 +45,15 @@ $scope.onboardingSteps = [
 ];
 ```
 
-The directive itself is called *onboarding-popover*. There are 2 required inline attributes.
+The directive itself is called *onboarding-popover*. There are 3 required inline attributes.
 
   * `enabled` should be set to a boolean scope variable that controls whether the onboarding UX is displayed.
   * `steps` should point to the steps configuration.
+  * `stepIndex` is an integer that controls the current step being shown. It will default to 0 if not set explicitly.
 
-There are also 2 optional inline attributes.
+There is also 1 optional inline attribute.
 
   * `onFinishCallback` should point to a function that will be called when the user either clicks the Close or Done button. This is a good place to set a cookie to disable showing the on-boarding UX every time.
-  * `stepIndex` is an integer that controls the current step being shown. It will default to 0 if not set explicitly.
 
 ```html
 <onboarding-popover enabled="onboardingEnabled" steps="onboardingSteps" on-finish-callback='myCallbackFunction' step-index='onboardingIndex'></onboarding-popover>
