@@ -49,6 +49,7 @@ app.directive 'onboardingPopover', ['ngOnboardingDefaults', '$sce', '$timeout', 
     enabled: '='
     steps: '='
     onFinishCallback: '='
+    onStepCallback: '='
     index: '=stepIndex'
   replace: true
   link: (scope, element, attrs) ->
@@ -67,6 +68,9 @@ app.directive 'onboardingPopover', ['ngOnboardingDefaults', '$sce', '$timeout', 
 
     # Watch for changes in the current step index
     scope.$watch 'index', (newVal, oldVal) ->
+      if scope.onStepCallback
+        scope.onStepCallback()
+
       if typeof(newVal) == 'undefined'
         scope.enabled = false
         setupOverlay(false)

@@ -1,7 +1,10 @@
 {
-  "name": "ngOnboarding",
-  "version": "0.1.7",
-  "main": ["dist/ng-onboarding.js", "dist/ng-onboarding.css"],
+  "name": "ngOnboarding-eDocu",
+  "version": "0.1.8",
+  "main": [
+    "dist/ng-onboarding.js",
+    "dist/ng-onboarding.css"
+  ],
   "ignore": [
     ".gitignore",
     "bower_components",
@@ -13,14 +16,25 @@
     "Gruntfile.js",
     "karma.conf.coffee",
     "package.json",
-    "screenshot.png"
+    "screenshot.png",
+    "**/.*",
+    "test",
+    "tests"
   ],
-  "dependencies": {},
   "devDependencies": {
     "angular": "~1.2.4",
     "angular-mocks": "~1.2.4",
     "jasmine": "~1.3.1",
     "karma-jasmine": "~0.1.3",
     "jquery": "~2.0"
+  },
+  "homepage": "https://github.com/infones/ngOnboarding",
+  "authors": [
+    "adamalbrecht"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/infones/ngOnboarding.git"
   }
 }
