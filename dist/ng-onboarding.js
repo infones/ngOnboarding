@@ -73,10 +73,7 @@
           };
           scope.close = function() {
             scope.enabled = false;
-            setupOverlay(false);
-            if (scope.onFinishCallback) {
-              return scope.onFinishCallback();
-            }
+            return setupOverlay(false);
           };
           scope.$watch('index', function(newVal, oldVal) {
             var attr, k, v, _i, _len;
