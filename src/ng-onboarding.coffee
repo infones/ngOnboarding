@@ -66,6 +66,11 @@ app.directive 'onboardingPopover', ['ngOnboardingDefaults', '$sce', '$timeout', 
     scope.close = ->
       scope.enabled = false
       setupOverlay(false)
+    scope.done = ->
+      if scope.onStepCallback
+        scope.onStepCallback()
+      scope.enabled = false
+      setupOverlay(false)
 
     # Watch for changes in the current step index
     scope.$watch 'index', (newVal, oldVal) ->
@@ -166,7 +171,7 @@ app.directive 'onboardingPopover', ['ngOnboardingDefaults', '$sce', '$timeout', 
                     <span ng-show='showStepInfo' class='{{stepClass}}'>{{actualStepText}} {{index + 1}} {{totalStepText}} {{stepCount}}</span>
                     <a href='' ng-click='previous()' ng-show='showPreviousButton' class='{{buttonClass}}' ng-bind-html='previousButtonText'></a>
                     <a href='' ng-click='next()' ng-show='showNextButton' class='{{buttonClass}}' ng-bind-html='nextButtonText'></a>
-                    <a href='' ng-click='close()' ng-show='showDoneButton && lastStep' class='{{buttonClass}}' ng-bind-html='doneButtonText'></a>
+                    <a href='' ng-click='done()' ng-show='showDoneButton && lastStep' class='{{buttonClass}}' ng-bind-html='doneButtonText'></a>
                   </div>
                 </div>
               </div>
