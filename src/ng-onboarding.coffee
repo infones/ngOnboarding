@@ -87,7 +87,7 @@ app.directive 'onboardingPopover', ['ngOnboardingDefaults', '$sce', '$timeout', 
       for attr in attributesToClear
         scope[attr] = null
       for k, v of ngOnboardingDefaults
-        if curStep[k] == undefined
+        if curStep != undefined && curStep[k] == undefined
           scope[k] = v
       for k, v of curStep
         scope[k] = v

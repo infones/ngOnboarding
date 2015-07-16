@@ -100,7 +100,7 @@
             }
             for (k in ngOnboardingDefaults) {
               v = ngOnboardingDefaults[k];
-              if (curStep[k] === void 0) {
+              if (curStep !== void 0 && curStep[k] === void 0) {
                 scope[k] = v;
               }
             }
