@@ -100,8 +100,9 @@ app.directive 'onboardingPopover', ['ngOnboardingDefaults', '$sce', '$timeout', 
       scope.closeButtonText = $sce.trustAsHtml(scope.closeButtonText)
       scope.actualStepText = $sce.trustAsHtml(scope.actualStepText)
       scope.totalStepText = $sce.trustAsHtml(scope.totalStepText)
-      setupOverlay()
-      setupPositioning()
+      if curStep != undefined
+        setupOverlay()
+        setupPositioning()
 
     setupOverlay = (showOverlay=true) ->
       $('.onboarding-focus').removeClass('onboarding-focus')

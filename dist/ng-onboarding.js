@@ -115,8 +115,10 @@
             scope.closeButtonText = $sce.trustAsHtml(scope.closeButtonText);
             scope.actualStepText = $sce.trustAsHtml(scope.actualStepText);
             scope.totalStepText = $sce.trustAsHtml(scope.totalStepText);
-            setupOverlay();
-            return setupPositioning();
+            if (curStep !== void 0) {
+              setupOverlay();
+              return setupPositioning();
+            }
           });
           setupOverlay = function(showOverlay) {
             if (showOverlay == null) {
