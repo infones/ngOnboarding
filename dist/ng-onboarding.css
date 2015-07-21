@@ -6,13 +6,13 @@
   white-space: normal;
   background-color: #ffffff;
   border: 1px solid #cccccc;
-  border-radius: 3px;
+  border-radius: 6px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   background-clip: padding-box;
   max-width: 800px;
   max-height: 800px;
-  min-width: 200px;
+  min-width: 300px;
   min-height: 50px;
 }
 .onboarding-popover.onboarding-top {
@@ -116,6 +116,7 @@
   font-weight: bold;
   line-height: 18px;
   background-color: #ffffff;
+  border-bottom: 1px solid #cccccc;
   border-radius: 5px 5px 0 0;
 }
 .onboarding-close-button {
@@ -141,6 +142,7 @@
   padding: 7px;
   display: block;
   background-color: transparent;
+  border-top: 1px solid #cccccc;
 }
 .onboarding-button {
   padding: 5px 10px;
