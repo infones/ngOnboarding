@@ -6,13 +6,13 @@
   white-space: normal;
   background-color: #ffffff;
   border: 1px solid #cccccc;
-  border-radius: 6px;
+  border-radius: 3px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   background-clip: padding-box;
   max-width: 800px;
   max-height: 800px;
-  min-width: 100px;
+  min-width: 200px;
   min-height: 50px;
 }
 .onboarding-popover.onboarding-top {
@@ -112,11 +112,10 @@
   position: relative;
   padding: 8px 14px;
   margin: 0;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   line-height: 18px;
   background-color: #ffffff;
-  border-bottom: 1px solid #ebebeb;
   border-radius: 5px 5px 0 0;
 }
 .onboarding-close-button {
@@ -141,7 +140,7 @@
   text-align: right;
   padding: 7px;
   display: block;
-  background-color: #f4f4f4;
+  background-color: transparent;
 }
 .onboarding-button {
   padding: 5px 10px;
@@ -192,5 +191,4 @@
   display: inline-block;
   margin-top: 7px;
   font-size: 80%;
-  font-style: italic;
 }

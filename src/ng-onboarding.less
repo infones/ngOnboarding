@@ -4,7 +4,7 @@
 @arrow-width: 10px;
 @arrow-color: #fff;
 @popover-title-bg: #fff;
-@popover-button-container-bg: #f4f4f4;
+@popover-button-container-bg: transparent;
 @arrow-outer-color: @popover-border-color;
 
 .onboarding-popover {
@@ -15,19 +15,19 @@
   white-space: normal;
   background-color: @popover-bg-color;
   border: 1px solid @popover-border-color;
-  border-radius: 6px;
+  border-radius: 3px;
   -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   background-clip: padding-box;
   max-width: 800px;
   max-height:800px;
-  min-width: 100px;
+  min-width: 200px;
   min-height: 50px;
 
   &.onboarding-top     { margin-top: -10px; }
   &.onboarding-right   { margin-left: 10px; }
   &.onboarding-bottom  { margin-top: 10px; }
-  &.onboarding-left    { margin-left: -10px; } 
+  &.onboarding-left    { margin-left: -10px; }
 }
 .onboarding-popover.onboarding-centered {
   top: 50%;
@@ -117,11 +117,10 @@
   position: relative;
   padding: 8px 14px;
   margin: 0;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   line-height: 18px;
   background-color: @popover-title-bg;
-  border-bottom: 1px solid #ebebeb;
   border-radius: 5px 5px 0 0;
 }
 .onboarding-close-button {
@@ -146,7 +145,7 @@
   display: block;
   background-color: @popover-button-container-bg;
 }
-.onboarding-button { 
+.onboarding-button {
   padding: 5px 10px;
   margin: 0;
   font-size: 12px;
@@ -196,5 +195,4 @@
   display: inline-block;
   margin-top: 7px;
   font-size: 80%;
-  font-style: italic;
 }
