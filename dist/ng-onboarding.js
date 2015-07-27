@@ -146,7 +146,7 @@
                 } else if (scope.position === 'left') {
                   right = $(window).width() - $(attachTo).offset().left + xMargin;
                 } else if (scope.position === 'top' || scope.position === 'bottom') {
-                  left = $(attachTo).offset().left + $(attachTo).outerWidth() / 2 - $('.onboarding-popover.onboarding-bottom').outerWidth() / 2;
+                  left = $(attachTo).offset().left + $(attachTo).outerWidth() / 2 - $('.onboarding-popover').outerWidth() / 2;
                 }
                 if (curStep['xOffset']) {
                   if (left !== null) {
