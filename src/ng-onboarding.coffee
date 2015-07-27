@@ -22,8 +22,8 @@ app.provider "ngOnboardingDefaults", ->
     buttonContainerClass: 'onboarding-button-container',
     buttonClass: "onboarding-button",
     showButtons: true,
-    nextButtonText: 'Next <i class="fa fa-angle-right"></i>',
-    previousButtonText: '<i class="fa fa-angle-left"></i> Previous',
+    nextButtonText: 'Next',
+    previousButtonText: 'Previous',
     showDoneButton: true,
     doneButtonText: 'Done',
     closeButtonClass: 'onboarding-close-button',
@@ -94,8 +94,8 @@ app.directive 'onboardingPopover', ['ngOnboardingDefaults', '$sce', '$timeout', 
 
       # Allow some variables to include html
       scope.description = $sce.trustAsHtml(scope.description)
-      scope.nextButtonText = $sce.trustAsHtml(scope.nextButtonText)
-      scope.previousButtonText = $sce.trustAsHtml(scope.previousButtonText)
+      scope.nextButtonText = $sce.trustAsHtml(scope.nextButtonText + ' <i class="fa fa-angle-right"></i>')
+      scope.previousButtonText = $sce.trustAsHtml('<i class="fa fa-angle-left"></i> ' + scope.previousButtonText)
       scope.doneButtonText = $sce.trustAsHtml(scope.doneButtonText)
       scope.closeButtonText = $sce.trustAsHtml(scope.closeButtonText)
       scope.actualStepText = $sce.trustAsHtml(scope.actualStepText)

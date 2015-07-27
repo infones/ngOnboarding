@@ -5,7 +5,7 @@
   text-align: left;
   white-space: normal;
   background-color: #ffffff;
-  border: 1px solid #cccccc;
+  border-left: 3px solid #199ce3;
   border-radius: 6px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -56,7 +56,7 @@
   top: -11px;
   left: 50%;
   margin-left: -11px;
-  border-bottom-color: #cccccc;
+  border-bottom-color: #199ce3;
   border-top-width: 0;
 }
 .onboarding-popover.onboarding-bottom .onboarding-arrow:after {
@@ -70,7 +70,7 @@
   bottom: -11px;
   left: 50%;
   margin-left: -11px;
-  border-top-color: #cccccc;
+  border-top-color: #199ce3;
   border-bottom-width: 0;
 }
 .onboarding-popover.onboarding-top .onboarding-arrow:after {
@@ -84,7 +84,7 @@
   top: 50%;
   right: -11px;
   margin-top: -11px;
-  border-left-color: #cccccc;
+  border-left-color: #199ce3;
   border-right-width: 0;
 }
 .onboarding-popover.onboarding-left .onboarding-arrow:after {
@@ -98,7 +98,7 @@
   top: 50%;
   left: -11px;
   margin-top: -11px;
-  border-right-color: #cccccc;
+  border-right-color: #199ce3;
   border-left-width: 0;
 }
 .onboarding-popover.onboarding-right .onboarding-arrow:after {

@@ -16,8 +16,8 @@
         buttonContainerClass: 'onboarding-button-container',
         buttonClass: "onboarding-button",
         showButtons: true,
-        nextButtonText: 'Next <i class="fa fa-angle-right"></i>',
-        previousButtonText: '<i class="fa fa-angle-left"></i> Previous',
+        nextButtonText: 'Next',
+        previousButtonText: 'Previous',
         showDoneButton: true,
         doneButtonText: 'Done',
         closeButtonClass: 'onboarding-close-button',
@@ -109,8 +109,8 @@
               scope[k] = v;
             }
             scope.description = $sce.trustAsHtml(scope.description);
-            scope.nextButtonText = $sce.trustAsHtml(scope.nextButtonText);
-            scope.previousButtonText = $sce.trustAsHtml(scope.previousButtonText);
+            scope.nextButtonText = $sce.trustAsHtml(scope.nextButtonText + ' <i class="fa fa-angle-right"></i>');
+            scope.previousButtonText = $sce.trustAsHtml('<i class="fa fa-angle-left"></i> ' + scope.previousButtonText);
             scope.doneButtonText = $sce.trustAsHtml(scope.doneButtonText);
             scope.closeButtonText = $sce.trustAsHtml(scope.closeButtonText);
             scope.actualStepText = $sce.trustAsHtml(scope.actualStepText);
