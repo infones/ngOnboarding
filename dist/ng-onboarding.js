@@ -54,7 +54,7 @@
         scope: {
           enabled: '=',
           steps: '=',
-          skip: '=',
+          skipCallback: '=',
           onFinishCallback: '=',
           onStepCallback: '=',
           index: '=stepIndex'
@@ -85,8 +85,8 @@
             return setupOverlay(false);
           };
           scope.skip = function() {
-            if (scope.skip) {
-              return scope.skip();
+            if (scope.skipCallback) {
+              return scope.skipCallback();
             }
           };
           scope.$watch('index', function(newVal, oldVal) {
