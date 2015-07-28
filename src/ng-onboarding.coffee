@@ -49,6 +49,7 @@ app.directive 'onboardingPopover', ['ngOnboardingDefaults', '$sce', '$timeout', 
   scope:
     enabled: '='
     steps: '='
+    skip: '='
     onFinishCallback: '='
     onStepCallback: '='
     index: '=stepIndex'
@@ -72,6 +73,9 @@ app.directive 'onboardingPopover', ['ngOnboardingDefaults', '$sce', '$timeout', 
         scope.onStepCallback()
       scope.enabled = false
       setupOverlay(false)
+    scope.skip = ->
+      if scope.skip
+        scope.skip()
 
     # Watch for changes in the current step index
     scope.$watch 'index', (newVal, oldVal) ->
