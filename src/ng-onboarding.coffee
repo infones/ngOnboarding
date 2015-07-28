@@ -26,6 +26,7 @@ app.provider "ngOnboardingDefaults", ->
     previousButtonText: 'Previous',
     showDoneButton: true,
     doneButtonText: 'Done',
+    skipButtonText: 'Skip',
     closeButtonClass: 'onboarding-close-button',
     closeButtonText: '<i class="fa fa-times"></i>',
     stepClass: 'onboarding-step-info',
@@ -170,6 +171,7 @@ app.directive 'onboardingPopover', ['ngOnboardingDefaults', '$sce', '$timeout', 
                   </div>
                   <div class='{{buttonContainerClass}}' ng-show='showButtons'>
                     <span ng-show='showStepInfo' class='{{stepClass}}'>{{actualStepText}} {{index + 1}} {{totalStepText}} {{stepCount}}</span>
+                    <a href='' ng-click='skip()' class='{{buttonClass}}' ng-bind-html='skipButtonText'></a>
                     <a href='' ng-click='previous()' ng-show='showPreviousButton' class='{{buttonClass}}' ng-bind-html='previousButtonText'></a>
                     <a href='' ng-click='next()' ng-show='showNextButton' class='{{buttonClass}}' ng-bind-html='nextButtonText'></a>
                     <a href='' ng-click='done()' ng-show='showDoneButton && lastStep' class='{{buttonClass}}' ng-bind-html='doneButtonText'></a>
